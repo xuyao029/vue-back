@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './plugins/element.js'
+import ZkTable from 'vue-table-with-tree-grid'
 //导入全局样式表
 import './assets/css/global.css'
 import './assets/fonts/iconfont.css'
@@ -18,7 +19,7 @@ axios.interceptors.request.use(config =>{
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
-
+Vue.component(ZkTable.name, ZkTable)
 new Vue({
   router,
   store,
